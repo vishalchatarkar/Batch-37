@@ -1,0 +1,38 @@
+ 10 Jenkins Plugins
+ 
+ git
+ github
+ maven
+ java jdk 
+ sonarqube - Code quality  , qulaity gate's , 
+ docker - 
+ k8s 
+ ansible - 
+ selenium , java , web testing , record 
+ jmeter - performanec / load testing -  jmx (scr / test ) 
+ jira 
+ email ext 
+ graafana 
+ slunnk
+ terraform
+ 
+ AWS 
+ GCP 
+ Azure 
+ 
+ Admin
+ backup plugin's / mnaual 
+ access manage 
+ LDAP 
+ AD
+ 
+ Apperianece 
+ Blue ocean 
+ Green Balls
+ 
+ Security
+ trivy 
+ Nexus 
+ Cloud Amour 
+ 
+ Ec2
