@@ -1,0 +1,170 @@
+# 1. download the script
+#
+#   $ curl -fsSL https://get.docker.com -o install-docker.sh
+#
+# 2. verify the script's content
+#
+#   $ cat install-docker.sh
+#
+# 3. run the script with --dry-run to verify the steps it executes
+#
+#   $ sh install-docker.sh --dry-run
+#
+# 4. run the script either as root, or using sudo to perform the installation.
+#
+#   $ sudo sh install-docker.sh
+
+----------------------------
+
+sudo -i
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
+------------
+
+docker pull hello-world
+
+docker run -it ubuntu   -   while creation 
+
+docker exec -it f7e6161a66c2 bin/bash
+docker exec -it f7e6161a66c2 bin/bash
+
+Step -6  Your container is ready to play any application try to install GIT in ubuntu container
+apt update 	
+apt install git-all 
+apt install ansible
+apt install python
+
+
+----------------------
+
+
+Pull  -- pulling downloading image
+Run (pull)--  run the image - we will get container ()
+ 
+ 
+ ---------------
+ 
+ Step 1 Pull nginx image 
+
+	docker pull nginx  
+	docker images 
+	
+	
+docker images
+Step 2 run nginx image and create a container.
+
+	docker run nginx 
+
+Step 3 now the problem is this is web application so need to open a port and user via web browser 
+ 
+Step 4 run a container with port 80 
+
+	docker run -p 80:80 nginx
+	
+	------------------------
+	
+	------------
+	
+	
+	docker run --name docker-nginx -p 80:80 nginx
+	
+docker ps
+docker stop docker-nginx
+docker rm docker-nginx                - removeed
+
+
+----------------
+
+mkdir -p ~/docker-nginx/html
+cd ~/docker-nginx/html
+vi index.html
+
+
+----
+Simple HTML code 
+
+
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <title>Docker nginx Tutorial</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hello Learning team batch37 with Ariti , Jitendra , dikshit , Nisha</h1>
+      <p>This nginx page is brought to you by Docker in front of batch-37</p>
+    </div>
+  </body>
+</html>
+
+
+-----------
+simple HTML google page 
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+		<title>Google</title>
+	</head>
+	<body>
+		<header>
+			<a href="https://plus.google.com/u/0/up/follow">+Lara</a>
+			<a href="https://mail.google.com">Gmail</a>
+			<a href="https://www.google.com/imghp?hl=en&tab=wi&ei=Ox1NVMXuJYO3yATCjoFA&ved=0CAQQqi4oAg">Images</a>
+			<img id="products" src="products.png"/>
+			<img id="bell" src="bell.png"/>
+			<img id="share" src="share.png"/>
+			<img id="lara" class="headerpics" src="http://lh3.googleusercontent.com/-zkPWifjxy1M/AAAAAAAAAAI/AAAAAAAAAAA/7pAALFnncq4/s32-c/photo.jpg"/>
+		</header>
+		<div>
+			<img src="https://www.google.com/images/srpr/logo11w.png"/>
+			<form name="google" action="#" method="POST"><br>
+				<input type="search" class="search"><br>
+				<input type="submit" class="button" name="submit" value="Google Search">
+				<input type="submit" class="button" name="lucky" value="I'm Feeling Lucky">
+			</form>
+		</div>
+		<footer>
+			<a class="leftlinks" href="https://www.google.com/intl/en/ads/?fg=1">Advertising</a>
+			<a class="leftlinks" href="https://www.google.com/services/?fg=1">Business</a>
+			<a class="leftlinks" href="https://www.google.com/intl/en/about/">About</a>
+			<a class="rightlinks" href="https://www.google.com/preferences?hl=en">Settings</a>
+			<a class="rightlinks" href="https://www.google.com/intl/en/policies/?fg=1">Privacy & Terms</a>
+		</footer>
+	</body>
+</html>
+
+------------
+
+
+docker run
+ --name docker-nginx:22.2
+ -p 80:80                                           port maping vm:container
+ -d
+ -v ~/docker-nginx/html:/usr/share/nginx/html      volume mappinng attached and mapped   vm:container
+ nginx
+
+
+docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
+
+
+
+----------------
+
+
+	docker run
+	-it                   interactive 
+	-d                      deattached
+	-p 8080:8080                  port 
+	jenkins/jenkins:latest
+	
+	
+	COntainerised jenkin's CI server 
+	
+		docker run -it -d -p 8080:8080 jenkins/jenkins:latest
+		
+		
+		
