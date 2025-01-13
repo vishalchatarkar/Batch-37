@@ -1,0 +1,152 @@
+FROM ubuntu                          ----    OS image 
+RUN apt-get update                                      ------------ # any run os level command
+RUN apt-get install nginx -y                   --------------------- # any run os level command 
+CMD [“echo”,”Image created”]       --------------------   # any application level command
+
+
+
+this Docker file is to create the ubuntu + nginx image 
+
+
+
+
+
+------------installation ----------
+sudo -i
+apt-get update
+docker -v
+apt install docker.io
+
+-----------------
+
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
+-------------------
+Working Docker File
+
+FROM ubuntu
+MAINTAINER clouddevopshub@gmail.com
+RUN apt-get update
+RUN apt-get install nginx -y
+CMD [“echo”,”Image created”]
+
+
+
+------------
+
+Dockerfile
+
+FROM ubuntu   78 mb
+MAINTAINER clouddevopshub@gmail.com   #optional
+RUN apt-get update
+RUN apt-get install nginx -y   131 MB     = ubuntu + nginx 
+CMD ["echo","Image created"]
+LABEL project=abc
+COPY index.html
+ADD   URL chnage  fialed 
+EXPOSE 80
+Volumes 
+WORKDIR 
+-v
+
+-----build --------
+t=tag
+
+docker build -t mynginxbatch21 .
+
+Docke hub   remote location name 
+
+
+user name 
+
+
+
+docker tag fe618947c616 vikas4cloud/mynginxbatch21:latest
+
+
+docer push vikas4cloud/mynginxbatch21
+
+Entrypoint
+
+
+--------------
+
+FROM ubuntu    78 mb
+RUN apt-get update && apt-get install nginx -y  
+CMD ["echo","Image created"]
+
+----------
+
+FROM mynginxbatch21      --- 131 MB 
+
+OS Alpine 5MB + nginx   60+5 
+
+
+
+-------------
+CW 
+
+create a Docker file with smallest size   for nginx web servere and need to run on port 80
+
+less layer's
+
+FROM Alpine
+RUN apk update && apk install nginx -y
+CMD ["echo","Image created"]
+EXPOSE 80 
+
+----------
+
+
+FROM nginx:alpine  
+EXPOSE 80 
+
+
+--------
+
+FROM Centos
+RUN yum update && yum install nginx -y
+CMD ["echo","Image created"]
+EXPOSE 80 
+
+
+-----------------
+
+FROM komljen/ubuntu
+MAINTAINER Alen Komljen <alen.komljen@live.com>
+RUN apt-get update && apt-get -y install apache2 && 
+  rm /var/www/html/index.html && \
+  rm -rf /var/lib/apt/lists/*
+  
+  
+  --------------------
+  
+FROM komljen/php-apache
+MAINTAINER Alen Komljen <alen.komljen@live.com>
+
+ENV WP_PASS aeshiethooghahtu4Riebooquae6Ithe
+ENV WP_USER wordpress
+ENV WP_DB wordpress
+ENV APP_ROOT /var/www/html
+
+ADD http://wordpress.org/latest.tar.gz wordpress.tar.gz
+
+RUN \
+  tar xzf wordpress.tar.gz -C ${APP_ROOT} --strip-components 1 && \
+  rm wordpress.tar.gz
+
+COPY start.sh start.sh
+
+VOLUME ["$APP_ROOT"]
+
+RUN rm /usr/sbin/policy-rc.d
+CMD ["/start.sh"]
+
+EXPOSE 80
+
+----------------------------------
+project 
+Micro servre eveey servre (application) have docker file 
+
+Frontend  ? 
