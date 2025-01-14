@@ -150,3 +150,47 @@ project
 Micro servre eveey servre (application) have docker file 
 
 Frontend  ? 
+
+
+sudo -i
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
+
+docker commit  <container ID>  <new image name>
+
+docker commit e7716b15fe85 nginxbatch37
+
+docker tag <image-id of mynginxbatch17 > vikas4cloud/mynginxbatch21:latest
+
+docker tag cd2ec872532c vikas4cloud/mynginxbatch37:latest
+
+docker push vikas4cloud/mynginxbatch37:latest
+
+
+docker save vikas4cloud/mynginxbatch37 > mybackup37.tar
+
+inspact 
+
+docker system df
+
+docker image prune -a 
+
+
+
+
+
+
+htop 
+
+Q& a related to Docker  
+
+K8s pod security rules Container will be secure
+docker inspact
+ docker cID logs 
+ls -lts -  linux 
+
+
+
+
+
