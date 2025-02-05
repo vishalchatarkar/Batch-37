@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Build by itiyo'){
             steps{
-            sh 'javac helloworld.java'
+            sh 'javac helloworld'
             }
         }
         stage('Run by java'){
